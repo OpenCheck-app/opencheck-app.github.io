@@ -137,6 +137,32 @@ code,pre{font-family:var(--mono);font-size:13.5px}
 pre{margin:0;padding:12px 14px;border-radius:10px;background:var(--sunk);overflow-x:auto}
 @media (max-width:860px){.staff{grid-template-columns:1fr}}
 
+/* scans */
+.scanbadge{display:inline-flex;align-items:center;gap:8px;margin:18px 0 0;padding:6px 12px 6px 8px;border-radius:999px;background:var(--mint-soft);color:var(--ink);font-size:13.5px;font-weight:600;text-decoration:none;transition:filter .2s}
+.scanbadge:hover{filter:brightness(.97)}
+.scanbadge svg{color:var(--mint)}
+.scans{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.scan{position:relative;display:flex;flex-direction:column;padding:24px;border-radius:16px;background:var(--panel);border:1px solid var(--line);text-decoration:none;transition:transform .25s var(--ease),border-color .25s,box-shadow .25s}
+.scan:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--mint) 45%,var(--line));box-shadow:0 18px 40px -24px rgba(16,163,127,.55)}
+.scan .top{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}
+.scan .name{font-weight:600;font-size:15px}
+.scan .pill{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;background:var(--mint-soft);color:var(--clean);font-size:12.5px;font-weight:700}
+.scan .big{font:700 40px/1 var(--display);letter-spacing:-.03em}
+.scan .big small{font-size:22px;color:var(--faint);font-weight:600}
+.scan .what{color:var(--muted);font-size:14.5px;margin:8px 0 22px}
+.scan .go{margin-top:auto;color:var(--muted);font-size:14px;font-weight:600}
+.scan:hover .go{color:var(--ink)}
+.scan .go span{display:inline-block;transition:transform .25s var(--ease)}
+.scan:hover .go span{transform:translateX(3px)}
+.engines{margin:22px 0 0;padding:22px 24px;border-radius:16px;border:1px solid var(--line);background:var(--sunk)}
+.engines p{margin:0 0 12px;color:var(--muted);font-size:14px}
+.engines ul{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.engines li{display:inline-flex;align-items:center;gap:6px;padding:6px 11px;border-radius:8px;background:var(--panel);border:1px solid var(--line);font-size:13.5px;font-weight:500}
+.engines li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--mint)}
+.hashline{margin:16px 0 0;color:var(--faint);font-size:13.5px}
+.hashline code{font-size:12.5px;background:var(--sunk);padding:2px 7px;border-radius:6px;word-break:break-all}
+@media (max-width:860px){.scans{grid-template-columns:1fr}}
+
 /* faq */
 .faq{border-top:1px solid var(--line)}
 .faq details{border-bottom:1px solid var(--line)}
@@ -173,6 +199,7 @@ footer a:hover{color:var(--ink)}
     <a class="logo" href="#top"><img src="img/icon.svg" width="30" height="30" alt="">OpenCheck</a>
     <nav aria-label="Main">
       <a href="#trust">Why trust it</a>
+      <a href="#scans">Scans</a>
       <a href="#checks">What it checks</a>
       <a href="#staff">For staff</a>
       <a href="#faq">FAQ</a>
@@ -187,6 +214,7 @@ footer a:hover{color:var(--ink)}
     <div class="wrap">
       <div>
         <img src="img/icon.svg" width="64" height="64" alt="OpenCheck icon">
+        <a class="scanbadge" href="#scans"><svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="currentColor" opacity=".18"/><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M6 10.4l2.7 2.7L14.2 7.3"/></svg>Scanned clean by 70+ antivirus engines</a>
         <h1>The PC check players can actually trust.</h1>
         <p class="lede">OpenCheck finds Roblox executors, externals, unfair FastFlags, macros and lag switches, even ones that were deleted. It only reads, never connects to the internet, and every line of code is public.</p>
         <div class="ctas">
@@ -231,6 +259,41 @@ footer a:hover{color:var(--ink)}
         <div><svg width="26" height="26" viewBox="0 0 20 20" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M4 10.5l3.5 3.5L16 6"/></svg><h3>Safety tested</h3><p>Automated tests read the app's own code. Anything that could delete, change or upload fails the build.</p></div>
         <div><svg width="26" height="26" viewBox="0 0 20 20" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" d="M6 9V6.5a4 4 0 0 1 8 0V9M5 9h10v8H5zM10 12v2"/></svg><h3>Verifiable</h3><p>GitHub builds every release from the public code and signs proof of it. Each report shows the app's fingerprint.</p></div>
       </div>
+    </div>
+  </section>
+
+  <section class="block" id="scans">
+    <div class="wrap">
+      <p class="kicker">Independently scanned</p>
+      <h2>Tested clean by the major malware scanners.</h2>
+      <p class="sub">Every release is uploaded to independent malware scanners run by other companies. Open any report and check it yourself.</p>
+      <div class="scans">
+        <a class="scan" href="https://www.virustotal.com/gui/file/7ffa6ae3a756fbb3adaee1bbbccd0d64bde3818a370f48b08bded408473e5c8c" target="_blank" rel="noopener">
+          <div class="top"><span class="name">VirusTotal</span><span class="pill"><svg width="14" height="14" viewBox="0 0 20 20" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M4 10.5l3.5 3.5L16 6"/></svg>Clean</span></div>
+          <div class="big">0<small> / 70</small></div>
+          <p class="what">antivirus engines flagged it. VirusTotal is owned by Google and used by security teams everywhere.</p>
+          <span class="go">View the report <span>&rarr;</span></span>
+        </a>
+        <a class="scan" href="https://metadefender.com/results/hash/7ffa6ae3a756fbb3adaee1bbbccd0d64bde3818a370f48b08bded408473e5c8c" target="_blank" rel="noopener">
+          <div class="top"><span class="name">MetaDefender</span><span class="pill"><svg width="14" height="14" viewBox="0 0 20 20" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M4 10.5l3.5 3.5L16 6"/></svg>Clean</span></div>
+          <div class="big">0<small> threats</small></div>
+          <p class="what">found by OPSWAT's multi-engine scan, used by security teams to vet files.</p>
+          <span class="go">View the report <span>&rarr;</span></span>
+        </a>
+        <a class="scan" href="https://virusscan.jotti.org/en-US/filescanjob/1x050gk6mq" target="_blank" rel="noopener">
+          <div class="top"><span class="name">Jotti</span><span class="pill"><svg width="14" height="14" viewBox="0 0 20 20" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M4 10.5l3.5 3.5L16 6"/></svg>Clean</span></div>
+          <div class="big">0<small> / 13</small></div>
+          <p class="what">scanners reported malware in Jotti's independent multi-engine scan.</p>
+          <span class="go">View the report <span>&rarr;</span></span>
+        </a>
+      </div>
+      <div class="engines">
+        <p>Checked by engines from the biggest names in security, including:</p>
+        <ul>
+          <li>Microsoft Defender</li><li>Kaspersky</li><li>Bitdefender</li><li>ESET</li><li>Avast</li><li>AVG</li><li>Malwarebytes</li><li>Sophos</li><li>Trend Micro</li><li>Avira</li><li>Fortinet</li><li>G DATA</li><li>Dr.Web</li><li>ClamAV</li><li>K7</li><li>Ikarus</li>
+        </ul>
+      </div>
+      <p class="hashline">These reports are for the exact file you download (version 1.0.0). Its fingerprint, SHA-256 <code>7ffa6ae3a756fbb3adaee1bbbccd0d64bde3818a370f48b08bded408473e5c8c</code>, matches the release page.</p>
     </div>
   </section>
 
@@ -292,7 +355,7 @@ footer a:hover{color:var(--ink)}
     <div class="wrap">
       <h2>Questions people ask first.</h2>
       <div class="faq">
-        <details><summary>Is it a virus?</summary><p>No. It's open source, scored 0 out of 70 on VirusTotal, and every release is built by GitHub straight from the public code. You can read every line before running it.</p></details>
+        <details><summary>Is it a virus?</summary><p>No. It's open source, came back clean on VirusTotal (0 of 70 engines), MetaDefender and Jotti, and every release is built by GitHub straight from the public code. You can read every line before running it.</p></details>
         <details><summary>Why does it need admin?</summary><p>Windows only lets admins read Prefetch, the drive's change log and the Security event log. OpenCheck reads them and changes nothing.</p></details>
         <details><summary>Does it send my files anywhere?</summary><p>No. The app has no internet code at all. The report only leaves your PC if you press Copy or Save and share it yourself.</p></details>
         <details><summary>Will Bloxstrap or Fishstrap get me flagged?</summary><p>No. Bootstrappers are normal Roblox launchers. They're listed as context only and never count against anyone.</p></details>
