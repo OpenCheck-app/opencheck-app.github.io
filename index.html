@@ -141,7 +141,7 @@ pre{margin:0;padding:12px 14px;border-radius:10px;background:var(--sunk);overflo
 .scanbadge{display:inline-flex;align-items:center;gap:8px;margin:18px 0 0;padding:6px 12px 6px 8px;border-radius:999px;background:var(--mint-soft);color:var(--ink);font-size:13.5px;font-weight:600;text-decoration:none;transition:filter .2s}
 .scanbadge:hover{filter:brightness(.97)}
 .scanbadge svg{color:var(--mint)}
-.scans{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.scans{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
 .scan{position:relative;display:flex;flex-direction:column;padding:24px;border-radius:16px;background:var(--panel);border:1px solid var(--line);text-decoration:none;transition:transform .25s var(--ease),border-color .25s,box-shadow .25s}
 .scan:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--mint) 45%,var(--line));box-shadow:0 18px 40px -24px rgba(16,163,127,.55)}
 .scan .top{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}
@@ -215,7 +215,7 @@ footer a:hover{color:var(--ink)}
     <div class="wrap">
       <div>
         <img src="img/icon.svg" width="64" height="64" alt="OpenCheck icon">
-        <a class="scanbadge" href="#scans"><svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="currentColor" opacity=".18"/><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M6 10.4l2.7 2.7L14.2 7.3"/></svg>Scanned clean by 71 antivirus engines</a>
+        <a class="scanbadge" href="#scans"><svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="currentColor" opacity=".18"/><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M6 10.4l2.7 2.7L14.2 7.3"/></svg>Scanned clean by 70 antivirus engines</a>
         <h1>The PC check players can actually trust.</h1>
         <p class="lede">OpenCheck finds Roblox executors, externals, unfair FastFlags, macros and lag switches, even ones that were deleted. It only reads, never connects to the internet, and every line of code is public.</p>
         <div class="ctas">
@@ -241,7 +241,7 @@ footer a:hover{color:var(--ink)}
 
   <div class="proof">
     <div class="wrap">
-      <div><b>0 / 71</b><span>antivirus engines flagged it</span></div>
+      <div><b>0 / 70</b><span>antivirus engines flagged it</span></div>
       <div><b>0 bytes</b><span>ever sent over the internet</span></div>
       <div><b>75+</b><span>detection rules, and growing</span></div>
       <div><b>100%</b><span>open source, built in public</span></div>
@@ -269,19 +269,13 @@ footer a:hover{color:var(--ink)}
       <h2>Tested clean by the major malware scanners.</h2>
       <p class="sub">Every release is uploaded to independent malware scanners run by other companies. Open any report and check it yourself.</p>
       <div class="scans">
-        <a class="scan" href="https://www.virustotal.com/gui/file/9963b5d57dff8b5802f776fccdb73782aaa0d1fd20d99787bdf1bf1b1fc55916" target="_blank" rel="noopener">
+        <a class="scan" href="https://www.virustotal.com/gui/file/fe9e863010de76202728e9b57d6201addf129245a2aa8916b71acf1f1cdda41c" target="_blank" rel="noopener">
           <div class="top"><span class="name">VirusTotal</span><span class="pill"><svg width="14" height="14" viewBox="0 0 20 20" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M4 10.5l3.5 3.5L16 6"/></svg>Clean</span></div>
-          <div class="big">0<small> / 71</small></div>
+          <div class="big">0<small> / 70</small></div>
           <p class="what">antivirus engines flagged it. VirusTotal is owned by Google and used by security teams everywhere.</p>
           <span class="go">View the report <span>&rarr;</span></span>
         </a>
-        <a class="scan" href="https://metadefender.com/results/hash/9963b5d57dff8b5802f776fccdb73782aaa0d1fd20d99787bdf1bf1b1fc55916" target="_blank" rel="noopener">
-          <div class="top"><span class="name">MetaDefender</span><span class="pill"><svg width="14" height="14" viewBox="0 0 20 20" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M4 10.5l3.5 3.5L16 6"/></svg>0 engines</span></div>
-          <div class="big">0<small> engines flagged</small></div>
-          <p class="what">in OPSWAT's antivirus scan. Its sandbox marks the VM and system checks as "suspicious", which is expected for a PC checker (see the FAQ).</p>
-          <span class="go">View the report <span>&rarr;</span></span>
-        </a>
-        <a class="scan" href="https://virusscan.jotti.org/en-US/filescanjob/9bks03e0iq" target="_blank" rel="noopener">
+        <a class="scan" href="https://virusscan.jotti.org/en-US/filescanjob/h1x8ha39gi" target="_blank" rel="noopener">
           <div class="top"><span class="name">Jotti</span><span class="pill"><svg width="14" height="14" viewBox="0 0 20 20" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M4 10.5l3.5 3.5L16 6"/></svg>Clean</span></div>
           <div class="big">0<small> / 13</small></div>
           <p class="what">scanners reported malware in Jotti's independent multi-engine scan.</p>
@@ -294,7 +288,7 @@ footer a:hover{color:var(--ink)}
           <li>Microsoft Defender</li><li>Kaspersky</li><li>Bitdefender</li><li>ESET</li><li>Avast</li><li>AVG</li><li>Malwarebytes</li><li>Sophos</li><li>Trend Micro</li><li>Avira</li><li>Fortinet</li><li>G DATA</li><li>Dr.Web</li><li>ClamAV</li><li>K7</li><li>Ikarus</li>
         </ul>
       </div>
-      <p class="hashline">These reports are for the exact file you download (version 1.0.1). Its fingerprint, SHA-256 <code>9963b5d57dff8b5802f776fccdb73782aaa0d1fd20d99787bdf1bf1b1fc55916</code>, matches the release page.</p>
+      <p class="hashline">These reports are for the exact file you download (version 1.0.2). Its fingerprint, SHA-256 <code>fe9e863010de76202728e9b57d6201addf129245a2aa8916b71acf1f1cdda41c</code>, matches the release page.</p>
     </div>
   </section>
 
@@ -356,7 +350,7 @@ footer a:hover{color:var(--ink)}
     <div class="wrap">
       <h2>Questions people ask first.</h2>
       <div class="faq">
-        <details><summary>Is it a virus?</summary><p>No. It's open source, no antivirus engine flagged it on VirusTotal (0 of 71), MetaDefender or Jotti, and every release is built by GitHub straight from the public code. You can read every line before running it.</p></details>
+        <details><summary>Is it a virus?</summary><p>No. It's open source, no antivirus engine flagged it on VirusTotal (0 of 70) or Jotti (0 of 13), and every release is built by GitHub straight from the public code. You can read every line before running it.</p></details>
         <details id="faq-sandbox"><summary>Why does a sandbox call it suspicious?</summary><p>Sandboxes judge programs by behavior, not by what they're for. OpenCheck checks whether it's running in a virtual machine and reads Windows' program history, logs and hardware list, because that's how it finds cheats. Malware does similar checks, so sandboxes tag them as "anti-VM", "evasive" or "reconnaissance". No antivirus engine flags OpenCheck, it never connects to the internet, and every line of code is public, so you can see exactly why each check is there.</p></details>
         <details><summary>Why does it need admin?</summary><p>Windows only lets admins read Prefetch, the drive's change log and the Security event log. OpenCheck reads them and changes nothing.</p></details>
         <details><summary>Does it send my files anywhere?</summary><p>No. The app has no internet code at all. The report only leaves your PC if you press Copy or Save and share it yourself.</p></details>
